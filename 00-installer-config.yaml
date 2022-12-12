@@ -1,0 +1,13 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp0s3:
+      addresses:
+        - 192.168.15.10/24
+      nameservers:
+        addresses: [192.168.15.1]
+      routes:
+        - to: default
+          via: 192.168.15.1
+      dhcp4: no
+  version: 2

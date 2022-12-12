@@ -1,0 +1,1 @@
+# 在ubuntu server部署k8s
