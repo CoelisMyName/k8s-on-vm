@@ -34,5 +34,5 @@ kubernetesVersion: 1.26.0
 networking:
   dnsDomain: cluster.local
   serviceSubnet: 10.96.0.0/12
-  podSubnet: 10.244.0.0/12 # try to solve /run/flannel/subnet.env: no such file or directory
+  podSubnet: 10.144.0.0/12 # try to solve /run/flannel/subnet.env: no such file or directory
 scheduler: {}

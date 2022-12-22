@@ -1,0 +1,104 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    kubeadm.alpha.kubernetes.io/cri-socket: unix:///var/run/containerd/containerd.sock
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2022-12-12T13:04:22Z"
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: k8s-worker-1
+    kubernetes.io/os: linux
+  name: k8s-worker-1
+  resourceVersion: "40090"
+  uid: e097072f-0209-4ad9-98e3-d4996434789d
+spec: {}
+status:
+  addresses:
+  - address: 192.168.15.11
+    type: InternalIP
+  - address: k8s-worker-1
+    type: Hostname
+  allocatable:
+    cpu: "4"
+    ephemeral-storage: "22662763278"
+    hugepages-2Mi: "0"
+    memory: 8037952Ki
+    pods: "110"
+  capacity:
+    cpu: "4"
+    ephemeral-storage: 24590672Ki
+    hugepages-2Mi: "0"
+    memory: 8140352Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2022-12-21T08:18:56Z"
+    lastTransitionTime: "2022-12-12T13:04:22Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2022-12-21T08:18:56Z"
+    lastTransitionTime: "2022-12-12T13:04:22Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2022-12-21T08:18:56Z"
+    lastTransitionTime: "2022-12-12T13:04:22Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2022-12-21T08:18:56Z"
+    lastTransitionTime: "2022-12-21T07:19:11Z"
+    message: kubelet is posting ready status. AppArmor enabled
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - registry.aliyuncs.com/google_containers/kube-proxy@sha256:1e9bbe429e4e2b2ad32681c91deb98a334f1bf4135137df5f84f9d03689060fe
+    - registry.aliyuncs.com/google_containers/kube-proxy:v1.26.0
+    sizeBytes: 21536465
+  - names:
+    - docker.io/rancher/mirrored-flannelcni-flannel@sha256:ec0f0b7430c8370c9f33fe76eb0392c1ad2ddf4ccaf2b9f43995cca6c94d3832
+    - docker.io/rancher/mirrored-flannelcni-flannel:v0.20.2
+    sizeBytes: 20908409
+  - names:
+    - quay.io/jetstack/cert-manager-controller@sha256:1143471c90db621faee43ed53f250d0fcec9c86303ca83661c787d59486d2ff4
+    - quay.io/jetstack/cert-manager-controller:v1.10.1
+    sizeBytes: 17740776
+  - names:
+    - quay.io/jetstack/cert-manager-webhook@sha256:64121721c6659e6790d7de527e8bc115ffc28b6e73e1b9a7f9aa11a90286fe25
+    - quay.io/jetstack/cert-manager-webhook:v1.10.1
+    sizeBytes: 13727551
+  - names:
+    - quay.io/jetstack/cert-manager-cainjector@sha256:b5657161d2c2f74ab292da4cbaba3923bc74112525f70c3d884fb3c6ef83c303
+    - quay.io/jetstack/cert-manager-cainjector:v1.10.1
+    sizeBytes: 12201630
+  - names:
+    - docker.io/rancher/mirrored-flannelcni-flannel-cni-plugin@sha256:28d3a6be9f450282bf42e4dad143d41da23e3d91f66f19c01ee7fd21fd17cb2b
+    - docker.io/rancher/mirrored-flannelcni-flannel-cni-plugin:v1.1.0
+    sizeBytes: 3821285
+  - names:
+    - registry.aliyuncs.com/google_containers/pause@sha256:9001185023633d17a2f98ff69b6ff2615b8ea02a825adffa40422f51dfdcde9d
+    - registry.aliyuncs.com/google_containers/pause:3.8
+    sizeBytes: 311286
+  nodeInfo:
+    architecture: amd64
+    bootID: c15510b2-3642-4ef5-9b45-f635f167810e
+    containerRuntimeVersion: containerd://1.6.12
+    kernelVersion: 5.15.0-56-generic
+    kubeProxyVersion: v1.26.0
+    kubeletVersion: v1.26.0
+    machineID: bc40f4e077c549079cd29bcb7057bcdf
+    operatingSystem: linux
+    osImage: Ubuntu 22.04.1 LTS
+    systemUUID: 32f34d4f-d7c5-574d-a136-39d27a6935e1
